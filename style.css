@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #e8e7e6;
+}
+
+.dark-theme,
+.dark-theme #artist-img,
+.dark-theme .song {
+  background-color: #263238;
+  color: white;
+}
+
+.dark-theme .all-songs,
+.dark-theme .song-card,
+.dark-theme .playlist {
+  background-color: darkslategray;
+}
+
+.switch {
+  position: relative;
+  left: 94%;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: -24px;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 2px; /* Increase left by 2px */
+  bottom: 2px; /* Increase bottom by 2px */
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(50px);
+}
+
+/* Styles for theme name */
+.theme-name {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #ffffff;
+  right: -7px; /* Left side */
+  z-index: 1; /* Ensure it's above the slider */
+}
+
+.dark-theme .theme-name {
+  right: auto;
+  left: 10px; /* Right side */
+}
+
+.Main-heading {
+  text-align: center;
+  font-weight: 700;
+}
+
+.container {
+  display: flex;
+  /* border: 2px solid green; */
+  position: relative;
+}
+
+.all-songs {
+  height: 100vh;
+  width: 25vw;
+  padding-top: 20px;
+
+  border-radius: 5px;
+  background-color: #6bb8de;
+}
+
+#left-margin {
+  margin-left: 1rem;
+}
+
+select {
+  width: 100px;
+  height: 30px;
+  background-color: #6bb8de;
+  border-radius: 5px;
+  background-color: #3f6f8a;
+}
+
+.song {
+  width: 65%;
+  color: white;
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: blue;
+  text-align: center;
+  transition: all 1s;
+}
+
+.song:hover {
+  background-color: red;
+}
+
+.song-card {
+  height: 100vh;
+  width: 35vw;
+  position: absolute;
+  left: 28%;
+  box-shadow: -5px -5px grey;
+  background-color: #6bb8de;
+  border-radius: 5px;
+  border-radius: 5px;
+
+  /* border: 2px solid red; */
+}
+
+.left-right-button {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.left-right-button i,
+#addtoplaylist span {
+  color: white;
+}
+
+.controls {
+  text-align: center;
+}
+
+.controls audio {
+  width: 25rem;
+  margin-top: -8px px;
+}
+
+.button {
+  height: 35px;
+  width: 80px;
+  background-color: blueviolet;
+}
+
+.addtoplaylist {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#artist-img {
+  height: 25rem;
+  width: 28rem;
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: -5px -5px grey;
+  background-color: #0573aa;
+}
+
+img {
+  height: 300px;
+  width: 420px;
+  margin: 15px;
+  padding-bottom: 5px;
+
+  /* object-fit: cover; */
+}
+
+#song-title {
+  margin-left: 1rem;
+  margin-top: -1rem;
+  font-weight: 700;
+  color: black;
+}
+
+#artist-name {
+  padding-top: 5px;
+  margin-left: 1.1rem;
+  margin-top: -1rem;
+  color: black;
+}
+
+.playlist {
+  position: absolute;
+  top: 8%;
+  left: 60%;
+  margin-left: 5rem;
+  height: 92vh;
+  width: 20vw;
+  background-color: #6bb8de;
+  border-radius: 5px;
+  box-shadow: -5px -5px grey;
+
+  /* border: 2px solid red; */
+  overflow: hidden;
+}
+
+.playlist-create {
+  position: absolute;
+  left: 66%;
+}
+
+input {
+  line-height: 2.5em;
+  padding-left: 10px;
+}
+
+.submit-button {
+  background-color: #2196f3;
+  line-height: 2em;
+  width: 8rem;
+}
+
+#Current-playlist {
+  margin-left: 1rem;
+}
+
+#all-playlist {
+  margin-left: 1rem;
+}
+
+.search-box {
+  position: absolute;
+}
